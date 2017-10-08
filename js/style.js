@@ -6,7 +6,7 @@ var seconds = 0;
 setInterval(setTimer, 1000)
 
 function setTimer() {
-    if (hours == 24) {
+    if (hours == 23) {
         ++days
         hours = 0
         minutes = 0
@@ -16,7 +16,7 @@ function setTimer() {
         document.getElementById("minutes").innerHTML = minutes;
         document.getElementById("seconds").innerHTML = seconds;
     }
-    else if (minutes == 60) {
+    else if (minutes == 59) {
         ++hours
         minutes = 0
         seconds = 0
@@ -25,7 +25,7 @@ function setTimer() {
         document.getElementById("minutes").innerHTML = minutes;
         document.getElementById("seconds").innerHTML = seconds;
     }
-    else if (seconds == 60) {
+    else if (seconds == 59) {
         ++minutes
         seconds = 0
         document.getElementById("days").innerHTML = days;
